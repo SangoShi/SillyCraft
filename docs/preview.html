@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>SillyCraft — превью на устройствах</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { min-height: 100vh; background: radial-gradient(ellipse at top, #3a0c22, #14030b 70%); font-family: system-ui, sans-serif; color: #F6BBD0; display: flex; flex-direction: column; align-items: center; padding: 24px 16px 40px; gap: 18px; }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .bar button { font: 700 13px system-ui; padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(246,187,208,.3); background: rgba(255,255,255,.06); color: #F6BBD0; cursor: pointer; }
+  .bar button.on { background: #DD7FA1; color: #fff; border-color: #DD7FA1; }
+  .device { position: relative; padding: 14px; border-radius: 54px; background: #0b0b0d; box-shadow: 0 0 0 2px #2a2a30, 0 40px 100px rgba(0,0,0,.6), inset 0 0 0 2px #1c1c20; transition: width .4s, height .4s; }
+  .device::before { content: ""; position: absolute; top: 24px; left: 50%; width: 110px; height: 30px; margin-left: -55px; border-radius: 20px; background: #000; z-index: 2; }
+  .device.tablet { border-radius: 36px; padding: 18px; }
+  .device.tablet::before { width: 8px; height: 8px; margin-left: -4px; top: 6px; }
+  iframe { display: block; border: 0; border-radius: 40px; background: #FFF1F6; }
+  .tablet iframe { border-radius: 20px; }
+  .hint { font-size: 13px; opacity: .6; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="bar" id="bar">
+    <button data-w="390" data-h="844" class="on">iPhone 15 · 390</button>
+    <button data-w="360" data-h="780">Android · 360</button>
+    <button data-w="430" data-h="932">iPhone Pro Max · 430</button>
+    <button data-w="820" data-h="1180" data-t="1">iPad · 820</button>
+  </div>
+  <div class="device" id="dev"><iframe id="f" src="index.html" width="390" height="844"></iframe></div>
+  <p class="hint">Листай колесом мыши внутри экрана. Устройство переключается кнопками сверху.</p>
+<script>
+  const f = document.getElementById('f'), dev = document.getElementById('dev');
+  function fit() {
+    const w = +f.width, h = +f.height, s = Math.min(1, (innerHeight - 150) / (h + 28));
+    dev.style.transform = `scale(${s})`; dev.style.transformOrigin = 'top center';
+    dev.style.marginBottom = `${-(h + 28) * (1 - s)}px`;
+  }
+  document.getElementById('bar').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll('.bar button').forEach(x => x.classList.toggle('on', x === b));
+    f.width = b.dataset.w; f.height = b.dataset.h; dev.classList.toggle('tablet', !!b.dataset.t);
+    f.src = 'index.html?' + Date.now(); fit();
+  });
+  addEventListener('resize', fit); fit();
+</script>
+</body>
+</html>
