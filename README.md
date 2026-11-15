@@ -12,7 +12,7 @@
 <br>
 
 <a href="https://sangoshi.github.io/SillyCraft/"><img src="https://img.shields.io/badge/САЙТ-sillycraft-DD7FA1?style=for-the-badge&labelColor=2B0716" alt="Сайт"></a>
-<a href="https://github.com/SangoShi/SillyCraft/releases"><img src="https://img.shields.io/badge/СКАЧАТЬ-скоро-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
+<a href="https://github.com/SangoShi/SillyCraft/releases/latest"><img src="https://img.shields.io/badge/СКАЧАТЬ-0.1.0--alpha-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
 
 <img src="https://img.shields.io/badge/версия-0.1.0--alpha-F6BBD0?style=flat-square&labelColor=2B0716" alt="Версия">
 <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-DD7FA1?style=flat-square&labelColor=2B0716" alt="Windows">
@@ -24,7 +24,7 @@
 <br>
 
 > [!NOTE]
-> Проект в стадии **alpha**. Первая сборка для Windows скоро появится в [Releases](https://github.com/SangoShi/SillyCraft/releases).
+> Проект в стадии **alpha**. Первая сборка для Windows уже в [Releases](https://github.com/SangoShi/SillyCraft/releases/latest). Нашли баг или есть идея - заходите в [Discord](https://discord.gg/rK659czWb4).
 
 <br>
 
@@ -130,9 +130,11 @@ SillyCraft:  ✓ Готово! «Магия 1.21» уже в Prism Launcher.
 
 ## Установка
 
-1. Скачай последнюю версию из [Releases](https://github.com/SangoShi/SillyCraft/releases).
-2. Запусти установщик.
-3. Опиши свою первую сборку — и играй.
+1. Скачай последнюю версию из [Releases](https://github.com/SangoShi/SillyCraft/releases/latest):
+   - **`SillyCraft.exe`** - портативная версия, один файл, установка не нужна;
+   - **`SillyCraft-Setup.exe`** - установщик с ярлыками и удалением через «Программы».
+2. Запусти. Если Windows SmartScreen покажет «Неизвестный издатель» - нажми «Подробнее» → «Выполнить в любом случае» (приложение пока без цифровой подписи).
+3. Открой настройки, подключи свой ИИ (любой OpenAI-совместимый API) - и опиши свою первую сборку.
 
 <br>
 
