@@ -567,7 +567,7 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
   <canvas id="particles"></canvas>
   <div class="container hero-inner">
     <div class="hero-text">
-      <span class="hero-tag"><i class="dot"></i>v0.1.0-alpha · Tauri + AI</span>
+      <span class="hero-tag" data-version><i class="dot"></i>v0.2.0-alpha · Tauri + AI</span>
       <h1 id="heroTitle">Собирай модпаки <span class="nowrap"><span class="grad-text rot">словами</span>,</span> а&nbsp;не&nbsp;руками</h1>
       <p class="lead">SillyCraft — десктоп-приложение, где ты описываешь идею сборки обычным текстом, а ИИ подбирает моды, шейдеры и ресурспаки под версию Minecraft и загрузчик.</p>
       <div class="hero-cta">
@@ -760,7 +760,7 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
       <span><svg viewBox="0 0 12 12" fill="currentColor"><rect x="1" y="0" width="10" height="7"/><rect x="4" y="7" width="4" height="2"/><rect x="3" y="9" width="6" height="2"/></svg>Windows 10/11</span>
       <span><svg viewBox="0 0 12 12" fill="currentColor"><rect x="5" y="0" width="2" height="7"/><rect x="3" y="5" width="6" height="2"/><rect x="4" y="7" width="4" height="1"/><rect x="0" y="10" width="12" height="2"/></svg>Без установки</span>
       <span><svg viewBox="0 0 8 7" fill="currentColor"><rect x="1" y="0" width="2" height="1"/><rect x="5" y="0" width="2" height="1"/><rect x="0" y="1" width="8" height="2"/><rect x="1" y="3" width="6" height="1"/><rect x="2" y="4" width="4" height="1"/><rect x="3" y="5" width="2" height="1"/></svg>Бесплатно</span>
-      <span>v0.1.0-alpha</span>
+      <span data-version><a href="https://github.com/SangoShi/SillyCraft/releases/latest" target="_blank" rel="noopener" data-cursor="Релиз" style="color:inherit;text-decoration:none">v0.2.0-alpha</a></span>
     </div>
   </div>
   <div class="grass"></div>
@@ -1234,6 +1234,22 @@ if (fine && !reduced) addEventListener('pointermove', e => {
 
   let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => img.complete && build(), 200); });
 })();
+</script>
+<script>
+/* Актуальная версия из GitHub Releases; при любой ошибке остаётся вшитая */
+fetch('https://api.github.com/repos/SangoShi/SillyCraft/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(rel => {
+    const tag = String(rel.tag_name || '').trim();
+    if (!/^v?\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(tag)) return;
+    const ver = tag[0] === 'v' ? tag : 'v' + tag, re = /v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?/;
+    document.querySelectorAll('[data-version]').forEach(el => {
+      const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      for (let n; (n = w.nextNode());) if (re.test(n.nodeValue)) n.nodeValue = n.nodeValue.replace(re, ver);
+      if (/^https:\/\/github\.com\//.test(rel.html_url || '')) el.querySelectorAll('a').forEach(a => { a.href = rel.html_url; });
+    });
+  })
+  .catch(() => {});
 </script>
 </body>
 </html>
