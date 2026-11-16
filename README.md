@@ -12,9 +12,9 @@
 <br>
 
 <a href="https://sangoshi.github.io/SillyCraft/"><img src="https://img.shields.io/badge/САЙТ-sillycraft-DD7FA1?style=for-the-badge&labelColor=2B0716" alt="Сайт"></a>
-<a href="https://github.com/SangoShi/SillyCraft/releases/latest"><img src="https://img.shields.io/badge/СКАЧАТЬ-0.3.0--alpha-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
+<a href="https://github.com/SangoShi/SillyCraft/releases/latest"><img src="https://img.shields.io/badge/СКАЧАТЬ-0.4.0--alpha-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
 
-<img src="https://img.shields.io/badge/версия-0.3.0--alpha-F6BBD0?style=flat-square&labelColor=2B0716" alt="Версия">
+<img src="https://img.shields.io/badge/версия-0.4.0--alpha-F6BBD0?style=flat-square&labelColor=2B0716" alt="Версия">
 <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-DD7FA1?style=flat-square&labelColor=2B0716" alt="Windows">
 <img src="https://img.shields.io/badge/Tauri-React-94083C?style=flat-square&labelColor=2B0716" alt="Tauri + React">
 <img src="https://img.shields.io/badge/цена-бесплатно-5fba38?style=flat-square&labelColor=2B0716" alt="Бесплатно">
@@ -87,6 +87,20 @@ SillyCraft:  ✓ Готово! «Магия 1.21» уже в Prism Launcher.
 
 ### ✦ 4 загрузчика
 Версия загрузчика выбирается вручную или автоматически под версию игры.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+### ✦ Настройка конфигов
+Напиши, что хочешь поменять, — ИИ найдёт нужные настройки модов и покажет их ползунками и переключателями. С резервной копией и откатом.
+
+</td>
+<td valign="top">
+
+### ✦ Проверка ошибок
+Находит дубли, конфликты и недостающие зависимости, читает лог вылета и чинит сборку сам.
 
 </td>
 </tr>
