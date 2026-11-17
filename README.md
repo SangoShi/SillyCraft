@@ -12,9 +12,9 @@
 <br>
 
 <a href="https://sangoshi.github.io/SillyCraft/"><img src="https://img.shields.io/badge/САЙТ-sillycraft-DD7FA1?style=for-the-badge&labelColor=2B0716" alt="Сайт"></a>
-<a href="https://github.com/SangoShi/SillyCraft/releases/latest"><img src="https://img.shields.io/badge/СКАЧАТЬ-0.5.1--alpha-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
+<a href="https://github.com/SangoShi/SillyCraft/releases/latest"><img src="https://img.shields.io/badge/СКАЧАТЬ-0.6.0--alpha-94083C?style=for-the-badge&labelColor=2B0716" alt="Скачать"></a>
 
-<img src="https://img.shields.io/badge/версия-0.5.1--alpha-F6BBD0?style=flat-square&labelColor=2B0716" alt="Версия">
+<img src="https://img.shields.io/badge/версия-0.6.0--alpha-F6BBD0?style=flat-square&labelColor=2B0716" alt="Версия">
 <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-DD7FA1?style=flat-square&labelColor=2B0716" alt="Windows">
 <img src="https://img.shields.io/badge/Tauri-React-94083C?style=flat-square&labelColor=2B0716" alt="Tauri + React">
 <img src="https://img.shields.io/badge/цена-бесплатно-5fba38?style=flat-square&labelColor=2B0716" alt="Бесплатно">
@@ -109,6 +109,14 @@ SillyCraft:  ✓ Готово! «Магия 1.21» уже в Prism Launcher.
 
 ### ✦ Свой датапак
 Опиши рецепты, лут, достижения или команды — ИИ напишет датапак под твою версию игры и сразу установит его в выбранный мир. Каждая правка сохраняется версией, к любой можно откатиться.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+### ✦ Свои квесты · NEW
+Мастерская FTB Quests: SillyCraft сам ставит мод в сборку и показывает главы как в игре. Перетаскивай квесты, правь задачи и награды или попроси ИИ написать целую цепочку из предметов твоих модов. Перед каждым сохранением делается бэкап.
 
 </td>
 </tr>

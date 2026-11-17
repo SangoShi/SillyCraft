@@ -282,6 +282,7 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
 .card > * { position: relative; }
 .c-ai { grid-column: span 2; grid-row: span 2; display: flex; flex-direction: column; }
 .c-lib, .c-launch, .c-loaders, .c-dp { grid-column: span 2; }
+.c-quests { grid-column: 1 / -1; }
 .icon {
   width: 60px; height: 60px; margin-bottom: 24px; display: grid; place-items: center; border-radius: 14px; color: #fff;
   background: linear-gradient(135deg, var(--accent), var(--crimson));
@@ -567,7 +568,7 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
   <canvas id="particles"></canvas>
   <div class="container hero-inner">
     <div class="hero-text">
-      <span class="hero-tag" data-version><i class="dot"></i>v0.5.1-alpha · Tauri + AI</span>
+      <span class="hero-tag" data-version><i class="dot"></i>v0.6.0-alpha · Tauri + AI</span>
       <h1 id="heroTitle">Собирай модпаки <span class="nowrap"><span class="grad-text rot">словами</span>,</span> а&nbsp;не&nbsp;руками</h1>
       <p class="lead">SillyCraft — десктоп-приложение, где ты описываешь идею сборки обычным текстом, а ИИ подбирает моды, шейдеры и ресурспаки под версию Minecraft и загрузчик.</p>
       <div class="hero-cta">
@@ -677,6 +678,12 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
         <h3>Проверка ошибок</h3>
         <p>Дубли, конфликты, зависимости и лог вылета — чинит сам.</p>
       </div>
+      <div class="card c-quests">
+        <div class="icon"><svg viewBox="0 0 16 16" fill="currentColor"><rect x="3" y="1" width="10" height="1"/><rect x="2" y="2" width="12" height="1"/><rect x="1" y="3" width="14" height="9"/><rect x="2" y="12" width="12" height="1"/><rect x="3" y="13" width="10" height="1"/><rect x="4" y="14" width="8" height="1"/></svg></div>
+        <h3>Свои квесты <span class="grad-text">NEW</span></h3>
+        <p>Мастерская FTB Quests: сама поставит мод в сборку и покажет главы как в игре — перетаскивай квесты, правь задачи и награды или попроси ИИ написать целую цепочку из предметов твоих модов. Перед каждым сохранением — бэкап.</p>
+        <div class="formats"><code>FTB Quests</code><code>задачи</code><code>награды</code><code>бэкапы</code></div>
+      </div>
     </div>
   </div>
 </section>
@@ -776,7 +783,7 @@ html:not(.motion) .btn:hover { transform: translateY(-3px); }
       <span><svg viewBox="0 0 12 12" fill="currentColor"><rect x="1" y="0" width="10" height="7"/><rect x="4" y="7" width="4" height="2"/><rect x="3" y="9" width="6" height="2"/></svg>Windows 10/11</span>
       <span><svg viewBox="0 0 12 12" fill="currentColor"><rect x="5" y="0" width="2" height="7"/><rect x="3" y="5" width="6" height="2"/><rect x="4" y="7" width="4" height="1"/><rect x="0" y="10" width="12" height="2"/></svg>Без установки</span>
       <span><svg viewBox="0 0 8 7" fill="currentColor"><rect x="1" y="0" width="2" height="1"/><rect x="5" y="0" width="2" height="1"/><rect x="0" y="1" width="8" height="2"/><rect x="1" y="3" width="6" height="1"/><rect x="2" y="4" width="4" height="1"/><rect x="3" y="5" width="2" height="1"/></svg>Бесплатно</span>
-      <span data-version><a href="https://github.com/SangoShi/SillyCraft/releases/latest" target="_blank" rel="noopener" data-cursor="Релиз" style="color:inherit;text-decoration:none">v0.5.1-alpha</a></span>
+      <span data-version><a href="https://github.com/SangoShi/SillyCraft/releases/latest" target="_blank" rel="noopener" data-cursor="Релиз" style="color:inherit;text-decoration:none">v0.6.0-alpha</a></span>
     </div>
   </div>
   <div class="grass"></div>
